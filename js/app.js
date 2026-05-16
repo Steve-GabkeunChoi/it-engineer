@@ -21,12 +21,16 @@ const els = {
   panels: document.querySelectorAll('.tab-panel'),
   heroLoadStatus: document.getElementById('heroLoadStatus'),
   chapterCountBadge: document.getElementById('chapterCountBadge'),
-  sidebarTitle: document.getElementById('sidebarTitle')
+  sidebarTitle: document.getElementById('sidebarTitle'),
+  mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+  sidebarBackdrop: document.getElementById('sidebarBackdrop'),
+  sidebar: document.getElementById('sidebar')
 };
 
 async function init() {
   bindTabs();
   bindActions();
+  bindMobileSidebar();
   await loadModules();
 }
 
@@ -197,6 +201,8 @@ function selectItem(type, id) {
 
   renderQuiz(item);
   renderEmptyAnalysis(type);
+
+  setMobileSidebarOpen(false);
 
   if (type === 'mock') {
     renderMockMode(item);
@@ -473,6 +479,37 @@ function resetAnswers() {
   state.lastResult = null;
   els.quizForm.reset();
   renderEmptyAnalysis(state.selectedItem?.type);
+}
+
+
+function bindMobileSidebar() {
+  if (!els.mobileMenuBtn || !els.sidebarBackdrop) return;
+
+  els.mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = document.body.classList.contains('sidebar-open');
+    setMobileSidebarOpen(!isOpen);
+  });
+
+  els.sidebarBackdrop.addEventListener('click', () => setMobileSidebarOpen(false));
+
+  window.addEventListener('keydown', event => {
+    if (event.key === 'Escape') setMobileSidebarOpen(false);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) setMobileSidebarOpen(false);
+  });
+}
+
+function setMobileSidebarOpen(open) {
+  document.body.classList.toggle('sidebar-open', open);
+  if (els.mobileMenuBtn) {
+    els.mobileMenuBtn.setAttribute('aria-expanded', String(open));
+    els.mobileMenuBtn.setAttribute('aria-label', open ? '과목 메뉴 닫기' : '과목 메뉴 열기');
+  }
+  if (els.sidebarBackdrop) {
+    els.sidebarBackdrop.hidden = !open;
+  }
 }
 
 function bindTabs() {

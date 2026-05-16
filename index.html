@@ -8,6 +8,11 @@
 </head>
 <body>
   <header class="app-header" aria-label="모바일 상단 영역">
+    <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="과목 메뉴 열기" aria-controls="sidebar" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="mobile-brand">
       <span class="brand-mark">G</span>
       <div>
@@ -19,7 +24,7 @@
   </header>
 
   <main class="app-shell">
-    <aside class="sidebar" aria-label="과목 및 챕터 목록">
+    <aside id="sidebar" class="sidebar" aria-label="과목 및 챕터 목록">
       <div class="sidebar-brand">
         <span class="brand-mark">G</span>
         <div>
@@ -33,6 +38,7 @@
       </div>
       <nav id="chapterList" class="chapter-list"></nav>
     </aside>
+    <div id="sidebarBackdrop" class="sidebar-backdrop" hidden></div>
 
     <section class="content-area">
       <section class="chapter-hero">
