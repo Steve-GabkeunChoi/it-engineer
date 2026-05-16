@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>정보처리기사 강의 실습 문제풀이</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header" aria-label="모바일 상단 영역">
+    <div class="mobile-brand">
+      <span class="brand-mark">G</span>
+      <div>
+        <strong>GAP CODING</strong>
+        <span>정보처리기사 대비 과정</span>
+      </div>
+    </div>
+    <div id="loadStatus" class="status-pill">로딩 전</div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="과목 및 챕터 목록">
+      <div class="sidebar-brand">
+        <span class="brand-mark">G</span>
+        <div>
+          <strong>GAP CODING</strong>
+          <span>정보처리기사 대비 과정</span>
+        </div>
+      </div>
+      <div class="sidebar-title-row">
+        <div id="sidebarTitle" class="sidebar-title">과목별 학습 메뉴</div>
+        <span id="chapterCountBadge" class="chapter-count-badge">0</span>
+      </div>
+      <nav id="chapterList" class="chapter-list"></nav>
+    </aside>
+
+    <section class="content-area">
+      <section class="chapter-hero">
+        <div>
+          <p class="eyebrow">INFORMATION PROCESSING ENGINEER</p>
+          <h1 id="chapterTitle">챕터를 불러오는 중입니다.</h1>
+          <p id="chapterSummary"></p>
+        </div>
+        <div class="hero-status">
+          <span>로드 상태</span>
+          <strong id="heroLoadStatus">25개 모듈</strong>
+        </div>
+      </section>
+
+      <div class="tab-bar" role="tablist" aria-label="학습 탭">
+        <button class="tab active" data-tab="lecture" type="button">강의</button>
+        <button class="tab" data-tab="practice" type="button">실습</button>
+        <button class="tab" data-tab="quiz" type="button">문제풀이</button>
+        <button class="tab" data-tab="analysis" type="button">채점 및 분석</button>
+      </div>
+
+      <section id="lecturePanel" class="tab-panel active">
+        <div id="lectureContent" class="content-card"></div>
+      </section>
+
+      <section id="practicePanel" class="tab-panel">
+        <div id="practiceContent" class="content-card"></div>
+      </section>
+
+      <section id="quizPanel" class="tab-panel">
+        <form id="quizForm" class="quiz-form"></form>
+        <div class="action-bar">
+          <button id="gradeBtn" class="primary-btn" type="button">채점하기</button>
+          <button id="resetBtn" class="secondary-btn" type="button">답안 초기화</button>
+        </div>
+      </section>
+
+      <section id="analysisPanel" class="tab-panel">
+        <div id="analysisContent" class="content-card empty-state">문제를 풀고 채점하면 결과와 정답 해설이 표시됩니다.</div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

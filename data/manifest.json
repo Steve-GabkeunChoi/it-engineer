@@ -1,0 +1,13 @@
+{
+  "project": "it-engineer-cert-course",
+  "moduleCount": 25,
+  "chapterModules": 20,
+  "mockExamRounds": 5,
+  "questionsPerChapter": 50,
+  "questionsPerMockExam": 100,
+  "chapterPracticeQuestions": 1000,
+  "totalMockExamQuestions": 500,
+  "totalQuestions": 1500,
+  "sidebarMode": "subject-chapter-tree",
+  "mockExamLoadMode": "sequential-json-auto-discovery:data/mock-exams/mock-exam-{n}.json"
+}

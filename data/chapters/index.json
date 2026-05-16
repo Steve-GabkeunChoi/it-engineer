@@ -1,0 +1,91 @@
+{
+  "subjects": [
+    {
+      "id": "sw-design",
+      "title": "소프트웨어 설계",
+      "order": 1
+    },
+    {
+      "id": "sw-development",
+      "title": "소프트웨어 개발",
+      "order": 2
+    },
+    {
+      "id": "database",
+      "title": "데이터베이스 구축",
+      "order": 3
+    },
+    {
+      "id": "programming",
+      "title": "프로그래밍 언어 활용",
+      "order": 4
+    },
+    {
+      "id": "system-management",
+      "title": "정보시스템 구축관리",
+      "order": 5
+    }
+  ],
+  "modules": [
+    {
+      "file": "sw-design-requirements-analysis.json"
+    },
+    {
+      "file": "sw-design-uml-ui-design.json"
+    },
+    {
+      "file": "sw-design-architecture-pattern.json"
+    },
+    {
+      "file": "sw-design-object-design.json"
+    },
+    {
+      "file": "sw-development-data-structure.json"
+    },
+    {
+      "file": "sw-development-module-integration.json"
+    },
+    {
+      "file": "sw-development-testing-quality.json"
+    },
+    {
+      "file": "sw-development-configuration-build.json"
+    },
+    {
+      "file": "database-data-modeling.json"
+    },
+    {
+      "file": "database-normalization.json"
+    },
+    {
+      "file": "database-sql-basic-advanced.json"
+    },
+    {
+      "file": "database-transaction-index.json"
+    },
+    {
+      "file": "programming-c-language.json"
+    },
+    {
+      "file": "programming-java-language.json"
+    },
+    {
+      "file": "programming-python-language.json"
+    },
+    {
+      "file": "programming-os-network.json"
+    },
+    {
+      "file": "system-management-methodology-project.json"
+    },
+    {
+      "file": "system-management-security-basic.json"
+    },
+    {
+      "file": "system-management-network-system-security.json"
+    },
+    {
+      "file": "system-management-new-tech-operation.json"
+    }
+  ]
+}
