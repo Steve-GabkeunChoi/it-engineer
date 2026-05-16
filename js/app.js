@@ -497,7 +497,7 @@ function bindMobileSidebar() {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 980) setMobileSidebarOpen(false);
+    if (window.innerWidth > 1200) setMobileSidebarOpen(false);
   });
 }
 
